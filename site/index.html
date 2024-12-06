@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="/src/styles.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="body-container">
+      <nav class="navbar">
+        <label class="logo"><i class="fas fa-palette"></i> Colorand Api</label>
+        <div class="links">
+          <a href="#api" class="link"><i class="fas fa-palette"></i> Api</a>
+          <a href="#about" class="link"
+            ><i class="fas fa-info-circle"></i> About</a
+          >
+          <a href="#info" class="link"><i class="fas fa-info"></i> Info</a>
+        </div>
+      </nav>
+      <header class="header" id="about">
+        <h1>A simple API to generate random colors</h1>
+        <p>
+          Welcome to Colorand API, your ultimate solution for generating random
+          colors for your projects. Whether you're a developer or a designer,
+          our API provides you with an easy and reliable way to get a random
+          color.
+        </p>
+      </header>
+      <main class="main">
+        <div class="generator">
+          <canvas id="canvas"></canvas>
+          <div class="generator-input">
+            <button id="mode"><i class="fas fa-adjust"></i> Mode</button>
+            <input
+              id="color-input"
+              type="text"
+              disabled
+              placeholder="#000000"
+            />
+            <button id="copy"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+          <button id="generate"><i class="fas fa-random"></i> Generate</button>
+        </div>
+        <div class="api-link" id="api">
+          <h2>API Link</h2>
+          <pre>
+            <code>https://colorand-api.com/api?type=hex</code>
+            <small>Also you can replace "hex" with "rgb" or "rgba"</small>
+          </pre>
+          <h4>Fetch example</h4>
+          <pre>
+            <code>fetch("https://colorand-api.com/api?type=hex")
+  .then((res) => res.json())
+  .then((data) => console.log(data));</code>
+          </pre>
+        </div>
+      </main>
+      <footer class="footer" id="info">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h2>Thank you for visiting</h2>
+            <p>
+              We appreciate your interest in Colorand API. Feel free to explore
+              and make the most out of our random color generation service.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4>Links</h4>
+            <a href="#api"><i class="fas fa-palette"></i> Api</a>
+            <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#info"><i class="fas fa-info"></i> Info</a>
+          </div>
+          <div class="footer-column">
+            <h4>Made with fun</h4>
+            <a href="https://github.com/ITSawa"
+              ><i class="fab fa-github"></i> Github</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <h2>Colorand Api</h2>
+          <p>&copy; 2023 Colorand Api</p>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
