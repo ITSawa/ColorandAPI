@@ -15,7 +15,7 @@ Usage
 Run the server:
 bash
 
-node server.js
+node server.js or npm start
 Access the API at http://localhost:3030.
 API Endpoints
 GET /api?type={hex|rgb|rgba}
